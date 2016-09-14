@@ -8,6 +8,8 @@
         <div ng-controller="HelloController">
             <input ng-model="greeting.text" />
             <p>{{ greeting.text }}, World</p>
+            <p>{{ someText.message }}</p>
+            <p ng-bind="greeting.text"></p>
         </div>
     </body>
 </html>
