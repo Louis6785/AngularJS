@@ -8,4 +8,8 @@ App.controller("StartUpController",function($scope) {
     $scope.requestFunding = function() {
         window.alert("Sorry, please get more customers first.");
     };
+
+    $scope.reset = function() {
+        $scope.startingEstimate = 0;
+    };
 });
