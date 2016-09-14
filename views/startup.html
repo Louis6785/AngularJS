@@ -6,10 +6,10 @@
         <script src="/app/startup.js"></script>
     </head>
     <body>
-        <form ng-submit="requestFunding()" ng-controller="StartUpController">
+        <form ng-controller="StartUpController">
             Starting: <input ng-change="computeNeeded()" ng-model="startingEstimate" />
             Recommendation: {{ needed }}
-            <button>Fund my startup!</button>
+            <button ng-click="requestFunding()">Fund my startup!</button>
             <button ng-click="reset()">Reset</button>
         </form>
     </body>
