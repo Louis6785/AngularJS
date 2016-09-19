@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+    <head>
+        <title>Nav</title>
+        <script src="/node_modules/angular/angular.js"></script>
+        <script src="/app/nav.js"></script>
+    </head>
+    <body>
+        <div class="navbar" ng-controller="NavController">
+            <li class="menu-item" ng-click="doSomething()">Something</li>
+        </div>
+
+        <div class="contentArea" ng-controller="ContentAreaController">
+            <div ng-click="doSomething()">...</div>
+        </div>
+    </body>
+</html>
