@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+    <head>
+        <title>學生名冊</title>
+        <script src="/node_modules/angular/angular.js"></script>
+        <script src="/app/student_list.js"></script>
+    </head>
+    <body ng-controller="StudentListController">
+        <ul>
+            <li ng-repeat="student in students">
+                <a href="/student/view/{{ student.id }}">{{ student.name }}</a>
+            </li>
+        </ul>
+        <button ng-click="insertTom()">Insert new Student</button>
+    </body>
+</html>
