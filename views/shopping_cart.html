@@ -15,5 +15,8 @@
             <span>{{ item.price * item.quantity | currency }}</span>
             <button ng-click="remove($index)">Remove</button>
         </div>
+        <div>Total: {{ totalCart() | currency }}</div>
+        <div>Discount: {{ bill.discount | currency }}</div>
+        <div>Subtotal: {{ subtotal() | currency }}</div>
     </body>
 </html>

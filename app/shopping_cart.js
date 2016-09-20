@@ -1,6 +1,8 @@
 var App = angular.module("myApp",[]);
 
 App.controller("CartController",function($scope) {
+    $scope.bill = {};
+
     $scope.items = [
         {
             title : 'Paint pots',
@@ -22,4 +24,23 @@ App.controller("CartController",function($scope) {
     $scope.remove = function(index) {
         $scope.items.splice(index, 1);
     };
+
+    $scope.totalCart = function() {
+        var total = 0;
+        for(var i=0, len=$scope.items.length ; i<len ; i++)
+        {
+            total = total + $scope.items[i].price * $scope.items[i].quantity;
+        }
+        return total;
+    };
+
+    $scope.subtotal = function() {
+        return $scope.totalCart() - $scope.bill.discount;
+    }
+
+    function calculateDiscount(newValue,oldValue,scope) {
+        $scope.bill.discount = newValue > 100 ? 10 : 0;
+    }
+
+    $scope.$watch($scope.totalCart, calculateDiscount);
 });
