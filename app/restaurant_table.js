@@ -9,4 +9,6 @@ App.controller("RestaurantTableController",function($scope) {
     $scope.selectRestaurant = function(row) {
         $scope.selectedRow = row;
     };
+    $scope.pictures = "pdf.gif";
+    $scope.param = "123";
 });
