@@ -27,7 +27,7 @@ App.controller("CartController",function($scope) {
 
     $scope.totalCart = function() {
         var total = 0;
-        for(var i=0, len=$scope.items.length ; i<len ; i++)
+        for(var i=0, len=$scope.items.length ; i < len ; i++)
         {
             total = total + $scope.items[i].price * $scope.items[i].quantity;
         }
