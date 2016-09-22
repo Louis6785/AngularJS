@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TitleCaps</title>
+        <script src="/node_modules/angular/angular.js"></script>
+        <script src="/app/titleCaseFilter.js"></script>
+        <link href="/node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    </head>
+    <body ng-app="HomeModule" ng-controller="HomeController">
+        <h1>{{ pageHeading | titleCase }}</h1>
+    </body>
+</html>
